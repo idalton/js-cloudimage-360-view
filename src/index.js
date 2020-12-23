@@ -1,7 +1,7 @@
-import 'core-js/features/array/for-each';
-import 'core-js/features/array/filter';
-import 'core-js/features/array/includes';
-import CI360Viewer from './ci360.service';
+// import './core-js/features/array/for-each';
+// import './core-js/features/array/filter';
+// import './core-js/features/array/includes';
+import CI360Viewer from './ci360.service.js';
 
 
 function init() {

@@ -16,11 +16,11 @@ import {
   setLoaderStyles,
   setMagnifyIconStyles,
   setView360Icon
-} from './ci360.utils';
+} from './ci360.utils.js';
 
 
 class CI360Viewer {
-  constructor(container, fullScreen, ratio) {
+  constructor(container, fullScreen, ratio, imageList) {
     this.container = container;
     this.activeImage = 1;
     this.movementStart = 0;
@@ -31,6 +31,8 @@ class CI360Viewer {
     this.fullScreenView = !!fullScreen;
     this.ratio = ratio;
     this.images = [];
+    this.imageList = imageList;
+    // this.images = images;
     this.devicePixelRatio = Math.round(window.devicePixelRatio || 1);
     this.isMobile = !!('ontouchstart' in window || navigator.msMaxTouchPoints);
     this.id = container.id;
@@ -787,7 +789,7 @@ class CI360Viewer {
 
     this.folder = folder;
     this.filename = filename;
-    this.imageList = imageList;
+    // this.imageList = imageList;
     this.indexZeroBase = indexZeroBase;
     this.amount = amount;
     this.bottomCircle = bottomCircle;
